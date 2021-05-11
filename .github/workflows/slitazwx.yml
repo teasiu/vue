@@ -29,7 +29,7 @@ jobs:
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git commit -am "Update slitazwx.jpg to ${LASTEST_TAG}"
-          git push -v --progress
+          git push --set-upstream origin master
           
       - name: Delete workflow runs
         uses: GitRML/delete-workflow-runs@main
