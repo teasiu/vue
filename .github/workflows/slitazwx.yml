@@ -14,7 +14,7 @@ jobs:
 
       - name: Update slitazwx.jpg
         run: |
-          LASTEST_TAG="$( curl -fsSL "http://www.ecoo.top:8082/app/assets/slitazwx.jpg" | md5sum | cut -d" " -f1 )"
+          LASTEST_TAG="$( curl -fsSL "http://www.ecoo.top:8082/assets/img/slitazwx.jpg" | md5sum | cut -d" " -f1 )"
           echo "LASTEST_TAG=$LASTEST_TAG" >> ${GITHUB_ENV}
           CURRENT_TAG="$( md5sum public/assets/img/slitazwx.jpg | cut -d" " -f1 )"
           echo "CURRENT_TAG=$CURRENT_TAG" >> ${GITHUB_ENV}
