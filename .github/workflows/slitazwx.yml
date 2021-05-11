@@ -20,7 +20,7 @@ jobs:
           echo "CURRENT_TAG=$CURRENT_TAG" >> ${GITHUB_ENV}
           if [ ${CURRENT_TAG} != ${LASTEST_TAG} ]
           then
-            wget -O public/assets/img/slitazwx.jpg http://www.ecoo.top:8082/assets/img/slitazwx.jpg
+            wget -O ./public/assets/img/slitazwx.jpg http://www.ecoo.top:8082/assets/img/slitazwx.jpg
           fi
 
       - name: Push
