@@ -1,0 +1,38 @@
+name: Update slitazwx.jpg
+
+on:
+    workflow_dispatch:
+    schedule:
+        - cron: '0 */2 * * *'
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout codebase
+        uses: actions/checkout@v2
+
+      - name: Update slitazwx.jpg
+        run: |
+          LASTEST_TAG="$( curl -fsSL "http://www.ecoo.top:8082/app/img/slitazwx.jpg" | md5sum | cut -d" " -f1 )"
+          echo "LASTEST_TAG=$LASTEST_TAG" >> ${GITHUB_ENV}
+          CURRENT_TAG="$( md5sum public/app/img/slitazwx.jpg | cut -d" " -f1 )"
+          echo "CURRENT_TAG=$CURRENT_TAG" >> ${GITHUB_ENV}
+          if [ ${CURRENT_TAG} != ${LASTEST_TAG} ]
+          then
+            wget -O public/app/img/slitazwx.jpg http://www.ecoo.top:8082/app/img/slitazwx.jpg
+          fi
+
+      - name: Push
+        if: env.CURRENT_TAG != env.LASTEST_TAG && !cancelled()
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit -am "Update slitazwx.jpg to ${LASTEST_TAG}"
+          git push -v --progress
+          
+      - name: Delete workflow runs
+        uses: GitRML/delete-workflow-runs@main
+        with:
+          retain_days: 1
+          keep_minimum_runs: 3
