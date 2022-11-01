@@ -101,7 +101,7 @@ Live demo at [Spencer's OneDrive](https://drive.swo.moe).
       </td>
     </tr>
   </tbody>
-</table>
+</table> 
 
 ... and more:
 
