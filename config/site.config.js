@@ -53,11 +53,11 @@ module.exports = {
   links: [
     {
       name: 'GitHub',
-      link: 'https://github.com/teasiu/vue',
+      link: 'https://github.com/teasiu',
     },
     {
-      name: '官方网站',
-      link: 'https://www.ecoo.top',
+      name: '官方社区',
+      link: 'https://bbs.histb.com',
     },
     {
       name: 'Telegram',
