@@ -7,7 +7,7 @@ This directory is a brief example of a [Vue.js](https://vuejs.org/) app that can
 ## Deploy Your Own
 
 Deploy your own Vue.js project with Vercel.
-
+LI88Q~SJuM6YRxRfCut3mvqkumooyURNrwByoax_
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/vercel/vercel/tree/main/examples/vue)
 
 _Live Example: https://vue.now-examples.now.sh_
