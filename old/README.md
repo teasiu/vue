@@ -18,7 +18,7 @@ To get started with Vue.js deployed with Vercel, you can use the [Vue CLI](https
 
 ```shell
 $ vue create
-```LI88Q~SJuM6YRxRfCut3mvqkumooyURNrwByoax_
+```
 
 ### Deploying From Your Terminal
 
@@ -28,5 +28,3 @@ You can deploy your new Vue.js project with a single command from your terminal 
 $ vercel
 ```
 
-
-7ade4935-7270-49fe-8188-34915e5a5a85
